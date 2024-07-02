@@ -1,0 +1,112 @@
+@font-face {
+    font-family: Gilroy-UltraLight;
+    src: url(../font/Gilroy-UltraLight.ttf);
+}
+
+@font-face {
+    font-family: Gilroy-Regular;
+    src: url(../font/Gilroy-Regular.ttf);
+}
+
+@font-face {
+    font-family: Gilroy-SemiBold;
+    src: url(../font/Gilroy-Semibold.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+//TEXT STYLES
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Gilroy-UltraLight;
+
+    strong{
+        font-family: Gilroy-Semibold;
+        font-weight: 600;
+    }
+}
+
+h1{
+    font-size: clamp(42px, 5vw, 72px);
+}
+
+h2{
+    font-size: clamp(32px, 2.9vw, 42px);
+}
+
+h3{
+    font-size: clamp(22px, 2.2vw, 32px);
+}
+
+
+p{
+    font-family: Gilroy-Regular;
+    font-size: clamp(15px, 1.04vw, 17px);
+
+    strong{
+        font-family: Gilroy-Semibold;
+        font-weight: 600;
+    }
+}
+
+p.p-large{
+    font-size: clamp(17px, 1.4vw, 21px);
+}
+
+p.p-small{
+    font-style: clamp(12px, 1.04vw, 15px);
+
+    em{
+        font-style: normal;
+        font-size: 12px;
+    }
+}
+
+//BUTTONS STYLES
+.btn-primary{
+    color: #F7F3ED;
+    font-family: Gilroy-SemiBold;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.56px;
+    text-transform: uppercase;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 17px clamp(30px, 3.8vw, 55px);
+    border-radius: 64px;
+    background: #BC934F;
+    transition: all 0.3s ease-out;
+    width: fit-content;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+.btn-secondary{
+
+}
