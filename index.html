@@ -13,18 +13,20 @@
   <body>
       <div class="siteWrapper">
         <div class="announcemnet-bar-wrapper">
-          <p class="p-sub">New patient membership: <a href="#">Join today</a> and receive 50% off your first three months.</p>
+          <p class="p-sub text-center">New patient membership: <a href="#">Join today</a> and receive 50% off your first three months.</p>
         </div>
         <header>
           <div class="header-nav-inner">
             <div class="header-logo">
-              <img src="../img/TulsiLogo_HotizontalLogo-Gold_Jade 1.png" alt="logo">
+              <a href="#">
+                <img src="../img/TulsiLogo_HotizontalLogo-Gold_Jade 1.png" alt="logo">
+              </a>
             </div>
 
-            <nav>
-              <!-- <button id="site-navigation-menu-toggle" class="menu-toggle">
+            <nav class="nav-list">
+              <button id="site-navigation-menu-toggle" class="menu-toggle">
                 <span>Menu</span>
-              </button> -->
+              </button>
               
               <div class="primary-navigation">
                 <ul id="menu-navigation">
@@ -51,24 +53,226 @@
 
             <div class="header-action">
               <div class="shop-icon">
-                <img src="../img/Shop_Icon.png" alt="shop-icon">
+                <a href="#">
+                  <img src="../img/Shop_Icon.png" alt="shop-icon">
+                </a>
               </div>
+              <a class="btn-primary" href="#">get started</a>
             </div>
           </div>
         </header>
 
         <main id="page" class="container">
-          <section class="page-section lightest">
+
+          <section class="page-section lightest hero-section">
             <div class="section-background"></div>
-            <div class="content-wrapper">
+            <div class="content-wrapper full-width">
               <div class="content">
-                <a class="btn-primary">Button1</a>
-                <a class="btn-secondary">Button2</a>
-                <h4>Hello</h4>
+                <div class="left-img">
+                  <div class="image-wrapper">
+                    <div class="image-block">
+                      <img src="/img/hero1.png" alt="image">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-wrapper">
+                  <h1 class="text-center">Healthcare, Elevated.</h1>
+                  <p class="p-large text-center">A modern approach to functional primary<br> care. We blend innovation with the<br> timeless wisdom of nature.</p>
+                  <a class="btn-primary" href="#">join us</a>
+                </div>
+
+                <div class="right-img">
+                  <div class="image-wrapper">
+                    <div class="image-block">
+                      <img src="/img/hero2.png" alt="image">
+                    </div>
+                  </div>
+                </div>
+
               </div>
               
             </div>
           </section>
+
+          <section class="page-section lightest tabs-section">
+            <div class="section-background"></div>
+            <div class="content-wrapper">
+              <div class="content">
+                <h4 class="text-center">Medical care for your every need</h4>
+                <h2 class="text-center">Explore treatments across specialties</h2>
+
+                <div class="tabs-buttons">
+                  <a class="tab-button" data-tab="1">primary care</a>
+                  <a class="tab-button" data-tab="2">regenerative medicine</a>
+                  <a class="tab-button" data-tab="3">aesthetics</a>
+                </div>
+
+                <div class="tab-dropdown-wrapper">
+                  <select class="tab-dropdown" onchange="changeTab(this.value)">
+                    <option value="1">primary care</option>
+                    <option value="2">regenerative medicine</option>
+                    <option value="3">aesthetics</option>
+                </select>
+              </div>
+              <div class="tab-content" id="tab-1">
+                <div class="tab-content-list">
+                   <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>Heart Disease</h4>
+                      </div>
+                    </a>
+                   </div>
+
+                   <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>Diabetes</h4>
+                      </div>
+                    </a>
+                   </div>
+
+                   <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>Hormone Imbalance</h4>
+                      </div>
+                    </a>
+                   </div>
+
+                   <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>Anxiety & Depression</h4>
+                      </div>
+                    </a>
+                   </div>
+
+                   <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>Hypertension</h4>
+                      </div>
+                    </a>
+                   </div>
+
+                   <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>Gut Health</h4>
+                      </div>
+                    </a>
+                   </div>
+
+                   <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>Stubborn Weight</h4>
+                      </div>
+                    </a>
+                   </div>
+
+                   <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>Thyroid Health</h4>
+                      </div>
+                    </a>
+                   </div>
+                </div>
+              </div>
+              <div class="tab-content" id="tab-2">
+                <div class="tab-content-list">
+                  <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>Stem Cell and Exosome Therapy</h4>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>PRP joint treatments</h4>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>hyperbaric oxygen tanks</h4>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>Stem Cell and Exosome Therapy</h4>
+                      </div>
+                    </a>
+                   </div>
+
+               </div>
+              </div>
+              <div class="tab-content" id="tab-3">
+                <div class="tab-content-list">
+                  <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>microneedling PRP facial</h4>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>exosome facial</h4>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>chemical peels</h4>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="tab-content-item">
+                    <a href="#">
+                      <div class="item-icon"></div>
+                      <div class="item-text">
+                        <h4>microneedling PRP facial</h4>
+                      </div>
+                    </a>
+                   </div>
+
+               </div>
+              </div>
+              </div>
+            </div>
+            </section>
         </main>
 
         <footer>
