@@ -90,3 +90,60 @@ function updateMargin() {
 
 window.addEventListener('DOMContentLoaded', updateMargin);
 window.addEventListener('resize', updateMargin);
+
+
+//Testimonials swiper
+const swiper2 = new Swiper('.swiper-2', {
+    //loop: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    
+    navigation: {
+      nextEl: '.cs-right-arrow',
+      prevEl: '.cs-left-arrow',
+    },
+
+    breakpoints: {
+        
+        768: {
+          slidesPerView: 2.2,
+          spaceBetween: 0,
+        },
+        
+      }
+  });
+
+  //Locations slider
+  const swiper3 = new Swiper('.swiper-3', {
+    //loop: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    
+    navigation: {
+      nextEl:  '.loc-right-arrow',
+      prevEl: '.loc-left-arrow',
+    },
+
+    breakpoints: {
+        
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 0,
+        },
+        
+      }
+  });
+
+  //new
+$(document).ready(function () {
+    $('.bio-read').on('click', function () {
+        // Find the closest .bio-slide container
+        var slide = $(this).closest('.bio-slide');
+
+        // Find the .bio-desc element within the closest .bio-slide and toggle its visibility
+        slide.find('.bio-desc').slideToggle();
+
+        // Toggle the .open class for the .bio-read element
+        $(this).toggleClass('open');
+    });
+});
