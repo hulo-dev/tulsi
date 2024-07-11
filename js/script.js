@@ -117,7 +117,7 @@ const swiper2 = new Swiper('.swiper-2', {
   const swiper3 = new Swiper('.swiper-3', {
     //loop: true,
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 1,
     
     navigation: {
       nextEl:  '.loc-right-arrow',
@@ -134,7 +134,128 @@ const swiper2 = new Swiper('.swiper-2', {
       }
   });
 
-  //new
+
+
+//Blog sammury slider for mobile
+function changeToSliderForMobile(){
+    const blogSummarySection = document.querySelector('.blog-summary-slider-section')
+
+    if (typeof(blogSummarySection) != 'undefined' && blogSummarySection != null && window.innerWidth < 768){
+        const blogSumWrapper = blogSummarySection.querySelector('.blog-summary-wrapper')
+        const blogSumList = blogSummarySection.querySelector('.blog-summary-list')
+        const blogSumItems = blogSummarySection.querySelectorAll('.summary-item')
+
+        blogSumWrapper.classList.add('swiper')
+        blogSumWrapper.classList.add('swiper-2')
+
+        blogSumList.classList.add('swiper-wrapper')
+
+        blogSumItems.forEach((item) => {
+            item.classList.add('swiper-slide')
+        })
+
+        const swiper2 = new Swiper('.swiper-2', {
+            //loop: true,
+            slidesPerView: 1,
+            spaceBetween: 1,
+            
+            navigation: {
+              nextEl:  '.bl-right-arrow',
+              prevEl: '.bl-left-arrow',
+            },
+          });
+    }
+
+}
+
+window.addEventListener('DOMContentLoaded', changeToSliderForMobile);
+window.addEventListener('resize', changeToSliderForMobile);
+
+//Services slider one
+const swiper4 = new Swiper('.swiper-service-1', {
+    //loop: true,
+    slidesPerView: 1,
+    spaceBetween: 1,
+    
+    navigation: {
+      nextEl:  '.serv-right-arrow-1',
+      prevEl: '.serv-left-arrow-1',
+    },
+
+    breakpoints: {
+        
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 1,
+        },
+        
+      }
+  });
+
+  //Services slider two
+const swiper5 = new Swiper('.swiper-service-2', {
+    //loop: true,
+    slidesPerView: 1,
+    spaceBetween: 1,
+    
+    navigation: {
+      nextEl:  '.serv-right-arrow-2',
+      prevEl: '.serv-left-arrow-2',
+    },
+
+    breakpoints: {
+        
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 1,
+        },
+        
+      }
+  });
+
+  //Services slider three
+const swiper6 = new Swiper('.swiper-service-3', {
+    //loop: true,
+    slidesPerView: 1,
+    spaceBetween: 1,
+    
+    navigation: {
+      nextEl:  '.serv-right-arrow-3',
+      prevEl: '.serv-left-arrow-3',
+    },
+
+    breakpoints: {
+        
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 1,
+        },
+        
+      }
+  });
+
+   //Services slider four
+const swiper7 = new Swiper('.swiper-service-4', {
+    //loop: true,
+    slidesPerView: 1,
+    spaceBetween: 1,
+    
+    navigation: {
+      nextEl:  '.serv-right-arrow-4',
+      prevEl: '.serv-left-arrow-4',
+    },
+
+    breakpoints: {
+        
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 1,
+        },
+        
+      }
+  });
+
+//new
 $(document).ready(function () {
     $('.bio-read').on('click', function () {
         // Find the closest .bio-slide container
@@ -146,4 +267,54 @@ $(document).ready(function () {
         // Toggle the .open class for the .bio-read element
         $(this).toggleClass('open');
     });
+    if ($('.info-blocks').length) {
+        // Open the first item and set it as active
+        var $firstInfoBlock = $('.info-blocks .info-bl:first');
+        $firstInfoBlock.find('.info-content').show();
+        $firstInfoBlock.addClass('active');
+
+        // Add click event listener
+        $('.info-bl h4').on('click', function () {
+            var $currentInfoBlock = $(this).closest('.info-bl');
+            var $currentInfoContent = $currentInfoBlock.find('.info-content');
+            var $currentInfoBl = $(this).closest('.info-bl');
+
+            // If the current block is already active, just toggle it
+            if ($currentInfoBl.hasClass('active')) {
+                $currentInfoContent.slideToggle();
+                $currentInfoBl.toggleClass('active');
+            } else {
+                // Close all other blocks and remove their active class
+                $('.info-bl .info-content').slideUp();
+                $('.info-bl').removeClass('active');
+
+                // Open the current block and set it as active
+                $currentInfoContent.slideDown();
+                $currentInfoBl.addClass('active');
+            }
+        });
+    }
+
+    if ($('.faq-block').length) {
+        // Add click event listener
+        $('.faq-item h4.title').on('click', function () {
+            var $currentFaqItem = $(this).closest('.faq-item');
+            var $currentFaqContent = $currentFaqItem.find('.faq-content');
+
+            // If the current item is already active, just toggle it
+            if ($currentFaqItem.hasClass('active')) {
+                $currentFaqContent.slideToggle();
+                $currentFaqItem.toggleClass('active');
+            } else {
+                // Close all other items and remove their active class
+                $('.faq-item .faq-content').slideUp();
+                $('.faq-item').removeClass('active');
+
+                // Open the current item and set it as active
+                $currentFaqContent.slideDown();
+                $currentFaqItem.addClass('active');
+            }
+        });
+    }
+
 });
