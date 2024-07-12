@@ -1586,7 +1586,7 @@ body{
 //Testimonials section
 .testimonials-section{
     .section-background{
-        background-image: url('/img/shape-bg.png');
+        //background-image: url('/img/shape-bg.png');
         background-position: center right;
         background-repeat: no-repeat;
         background-size: cover;
@@ -2220,7 +2220,7 @@ body{
                 position: absolute;
                 top: 0;
                 left: 0;
-                background-image: url('/img/blog/banner-it.jpg');
+                background-image: url('../img/blog/banner-it.jpg');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -2395,14 +2395,14 @@ body{
             }
 
             .item-pagination-link--prev{
-                background-image: url('/img/blog/pag1.jpg');
+                //background-image: url('/img/blog/pag1.jpg');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
             }
 
             .item-pagination-link--next{
-                background-image: url('/img/blog/pag2.jpg');
+                //background-image: url('/img/blog/pag2.jpg');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
