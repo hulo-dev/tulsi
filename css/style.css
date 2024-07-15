@@ -171,6 +171,11 @@ h2.white-side-line:before {
 .btn-primary:hover {
   opacity: 0.8;
 }
+@media screen and (max-width: 767px) {
+  .btn-primary {
+    width: 100%;
+  }
+}
 
 .btn-secondary {
   color: #BC934F;
@@ -196,6 +201,11 @@ h2.white-side-line:before {
 }
 .btn-secondary:hover {
   opacity: 0.8;
+}
+@media screen and (max-width: 767px) {
+  .btn-secondary {
+    width: 100%;
+  }
 }
 
 nav.woocommerce-pagination {
@@ -321,6 +331,54 @@ nav.woocommerce-pagination ul.page-numbers li:hover a {
 
 .padding-top50 {
   padding-top: clamp(34px, 2.8vw, 40px) !important;
+}
+
+.padding-bottom50 {
+  padding-bottom: clamp(34px, 2.8vw, 40px) !important;
+}
+
+.image-animated {
+  z-index: 5;
+}
+
+@media screen and (max-width: 1200px) {
+  .remove-after.services-mem-v2-section:after {
+    display: none !important;
+  }
+}
+
+.remove-after-f.services-mem-v2-section:after {
+  display: none !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .remove-bottom-padding {
+    padding-bottom: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .remove-before.services-mem-v2-section:before {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .remove-before.services-mem-section:before {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .remove-before.what-included-section:before {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .remove-top-padding {
+    padding-top: 0 !important;
+  }
 }
 
 .announcemnet-bar-wrapper {
@@ -523,6 +581,12 @@ header .burger-box .burger-inner .top-bun, header .burger-box .burger-inner .pat
   will-change: transform, width;
   background-color: #BC934F;
   height: 1px;
+}
+header .burger-box .burger-inner .top-bun {
+  transform-origin: left top;
+}
+header .burger-box .burger-inner .bottom-bun {
+  transform-origin: left bottom;
 }
 header .mobile-logo {
   display: none;
@@ -765,6 +829,15 @@ body.mobile-menu-open header .menu-toggle {
   justify-content: end;
   padding: 0;
 }
+body.mobile-menu-open .burger-inner .patty {
+  display: none;
+}
+body.mobile-menu-open .burger-inner .top-bun {
+  transform: rotateZ(25deg);
+}
+body.mobile-menu-open .burger-inner .bottom-bun {
+  transform: rotateZ(-25deg);
+}
 
 .hero-section .content-wrapper {
   padding-top: 40px !important;
@@ -825,6 +898,9 @@ body.mobile-menu-open header .menu-toggle {
     order: 1;
   }
 }
+.hero-section .left-img .image-wrapper {
+  height: clamp(300px, 34.3vw, 495px);
+}
 .hero-section .left-img .image-block {
   height: clamp(300px, 34.3vw, 495px);
 }
@@ -846,6 +922,9 @@ body.mobile-menu-open header .menu-toggle {
     margin-top: -200px;
     z-index: 5;
   }
+}
+.hero-section .right-img .image-wrapper {
+  height: clamp(350px, 47.2vw, 680px);
 }
 .hero-section .right-img .image-block {
   height: clamp(350px, 47.2vw, 680px);
@@ -1987,7 +2066,7 @@ body.mobile-menu-open header .menu-toggle {
 }
 @media screen and (max-width: 767px) {
   .hero-about-section .content-wrapper {
-    padding-top: 430px;
+    padding-top: 380px;
     padding-bottom: 40px;
   }
 }
@@ -2307,4 +2386,62 @@ body.mobile-menu-open header .menu-toggle {
   .line-move hr {
     display: none;
   }
+}
+
+.newsletter-form {
+  width: 100%;
+}
+.newsletter-form label {
+  display: none;
+}
+.newsletter-form .newsletter-form-header {
+  margin-bottom: 30px;
+}
+.newsletter-form .newsletter-form-header h4 {
+  font-size: 12px;
+  text-align: end;
+}
+@media screen and (max-width: 767px) {
+  .newsletter-form .newsletter-form-header h4 {
+    text-align: center;
+  }
+}
+.newsletter-form .newsletter-form-body {
+  display: flex;
+}
+.newsletter-form .newsletter-form-field-wrapper {
+  width: 100%;
+}
+.newsletter-form .newsletter-form-field-wrapper input {
+  width: 100%;
+  padding: 15px 0 15px clamp(15px, 2.08vw, 30px);
+  border: 1px solid #BC934F;
+  border-radius: 50px 0px 0px 50px;
+  background: transparent;
+  color: #F7F3ED;
+  font-family: Gilroy-Regular;
+  font-size: clamp(12px, 1.04vw, 15px);
+  font-weight: 400;
+}
+.newsletter-form .newsletter-form-field-wrapper input::-moz-placeholder {
+  color: #F7F3ED;
+  font-family: Gilroy-Regular;
+  font-size: clamp(12px, 1.04vw, 15px);
+  font-weight: 400;
+}
+.newsletter-form .newsletter-form-field-wrapper input::placeholder {
+  color: #F7F3ED;
+  font-family: Gilroy-Regular;
+  font-size: clamp(12px, 1.04vw, 15px);
+  font-weight: 400;
+}
+.newsletter-form .newsletter-form-button {
+  flex-shrink: 0;
+  padding: 15px clamp(30px, 3.1vw, 45px);
+  border-radius: 0px 50px 50px 0px;
+  background: #AD8742;
+  transition: all 0.3s ease-out;
+}
+.newsletter-form .newsletter-form-button:hover {
+  background-color: #b39247;
 }

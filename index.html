@@ -315,7 +315,7 @@
               <div class="content">
                 <div class="left-img">
                   <div class="image-wrapper">
-                    <div class="image-block">
+                    <div class="image-block image-animated">
                       <img src="img/hero1.png" alt="image">
                     </div>
                   </div>
@@ -329,7 +329,7 @@
 
                 <div class="right-img">
                   <div class="image-wrapper">
-                    <div class="image-block">
+                    <div class="image-block image-animated">
                       <img src="img/hero2.png" alt="image">
                     </div>
                   </div>
@@ -519,13 +519,13 @@
             </div>
             </section>
 
-            <section class="page-section light right-image-section  services-mem-v2-section">
+            <section class="page-section light right-image-section  services-mem-v2-section remove-before remove-bottom-padding">
               <div class="section-background contain-top-right cover">
-                <div class="image">
+                <div class="image image-animated">
                   <img src="img/approach.png" alt="">
                 </div>
               </div>
-              <div class="content-wrapper">
+              <div class="content-wrapper padding-top50">
                 <div class="left-part">
                   <div class="html-block">
                       <h4>what makes us different</h4>
@@ -585,53 +585,6 @@
                 </div>
               </div>
             </section>
-
-            <!-- <section class="page-section light outside-image-section cs-left-margin">
-              <div class="section-background"></div>
-              <div class="content-wrapper full-width">
-                <div class="content flex-row-reverse">
-                  <div class="image-wrapper">
-                    <div class="image-block">
-                      <img src="img/approach.png" alt="image">
-                    </div>
-                  </div>
-
-                  <div class="text-wrapper">
-                    <div class="text-inner">
-                      <h4>what makes us different</h4>
-                      <h2>Our approach</h2>
-  
-                      <div class="opened-list">
-                        <div class="opened-item active">
-                          <h4>Personalized Care for Unique Needs</h4>
-                          <p>We understand that each individual is unique. Our personalized care approach ensures that your treatment plan is custom-tailored to fit your specific lifestyle, needs, and health goals, providing you with the most effective and convenient solutions.</p>
-                          <a href="#" class="item-link">book your free consultation today →</a>
-                        </div>
-  
-                        <div class="opened-item">
-                          <h4>Prevention and Proactive Care</h4>
-                          <p>We understand that each individual is unique. Our personalized care approach ensures that your treatment plan is custom-tailored to fit your specific lifestyle, needs, and health goals, providing you with the most effective and convenient solutions.</p>
-                          <a href="#" class="item-link">book your free consultation today →</a>
-                        </div>
-  
-                        <div class="opened-item">
-                          <h4>Holistic Wellness Approach</h4>
-                          <p>We understand that each individual is unique. Our personalized care approach ensures that your treatment plan is custom-tailored to fit your specific lifestyle, needs, and health goals, providing you with the most effective and convenient solutions.</p>
-                          <a href="#" class="item-link">book your free consultation today →</a>
-                        </div>
-  
-                        <div class="opened-item">
-                          <h4>Empowerment and Support</h4>
-                          <p>We understand that each individual is unique. Our personalized care approach ensures that your treatment plan is custom-tailored to fit your specific lifestyle, needs, and health goals, providing you with the most effective and convenient solutions.</p>
-                          <a href="#" class="item-link">book your free consultation today →</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </section> -->
 
             <section class="page-section lightest blog-summary-slider-section">
               <div class="section-background"></div>
@@ -747,52 +700,6 @@
                 </div>
               </div>
             </section>
-
-            <!-- <section class="page-section light full-side-image-section cs-left-margin">
-              <div class="section-background"></div>
-              <div class="content-wrapper full-width">
-                <div class="content flex-row-reverse">
-                  <div class="image-wrapper">
-                    <div class="image-block">
-                      <img src="img/27.png" alt="image">
-                    </div>
-                  </div>
-                  <div class="text-wrapper">
-                    <div class="text-inner">
-                      <div class="header-text">
-                        <h4>Unlock the Full Spectrum of Wellness with Tulsi Memberships</h4>
-                        <h2>Your path to optimal health</h2>
-                      </div>
-  
-                      <div class="items-list">
-                        <div class="item">
-                          <p>Skip the wait with priority appointment booking</p>
-                        </div>
-  
-                        <div class="item">
-                          <p>Get in-depth, personalized care with a multidisciplinary team</p>
-                        </div>
-  
-                        <div class="item">
-                          <p>Get access to specialty wellness labs, including gut testing and cancer screening</p>
-                        </div>
-  
-                        <div class="item">
-                          <p>Transform with monthly health coaching, personalized nutrition, and supplement plans</p>
-                        </div>
-  
-                        <div class="item">
-                          <p>Enjoy member’s only perks, discounts, and wellness events</p>
-                        </div>
-                      </div>
-  
-                      <a href="#" class="btn-primary">learn about memberships</a>
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-            </section> -->
 
             <section class="page-section light hero-location-section right-image-section light-bg">
               <div class="section-background">
@@ -1223,11 +1130,23 @@
                   </div>
                 </div>
                 <div class="right-part">
-                  <div class="newsletter">
-                    <p>
-                      we send good emails
-                    </p>
+                  <form class="newsletter-form">
+  
+                    <div class="newsletter-form-header">
+                      <h4 class="newsletter-form-header-title">we send good emails</h4>
+                    </div>
+  
+                    <div class="newsletter-form-body">
+                        
+                          <div class="newsletter-form-field-wrapper form-item">
+                            <label class="newsletter-form-field-label title" for="email-yui_3_17_2_1_1691744823707_33406-field">Email Address</label>
+                            <input id="email-yui_3_17_2_1_1691744823707_33406-field" class="newsletter-form-field-element field-element" name="email" x-autocompletetype="email" autocomplete="email" type="email" spellcheck="false" placeholder="Enter your email">
+                          </div>
+                    
+                      <button class="newsletter-form-button">SIGN UP</button>
+                   
                   </div>
+                </form>
                   <div class="logo-footer">
                     <img src="img2/TulsiLogo_HotizontalLogoWC-Gold_Sand 1.png" alt="">
                   </div>

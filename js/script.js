@@ -47,32 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //set left margin to section with outside image
 
-/*function updateMargin() {
-    const outsideImageSection = document.querySelector('.outside-image-section');
-
-    let closestSection = outsideImageSection.previousElementSibling;
-   
-    if (!closestSection || closestSection.tagName !== 'SECTION') {
-        closestSection = outsideImageSection.nextElementSibling;
-    }
-
-    if (closestSection && closestSection.tagName === 'SECTION') {
-        const parentContentWrapper = closestSection.querySelector('.content-wrapper');
-        if (parentContentWrapper) {
-            const parentMarginLeft = window.getComputedStyle(parentContentWrapper).marginLeft;
-            const childContentWrapper = outsideImageSection.querySelector('.content-wrapper');
-
-            if (childContentWrapper) {
-                childContentWrapper.style.marginLeft = parentMarginLeft;
-            } 
-        } 
-    } 
-}
-
-window.addEventListener('DOMContentLoaded', updateMargin);
-window.addEventListener('resize', updateMargin);*/
-
-
 function updateMargin() {
     const leftMarginSections = document.querySelectorAll('.cs-left-margin');
 
@@ -390,24 +364,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-//Header folder padding
-// function updateMenuPadding() {
-//     const header = document.querySelector('header');
-//     const announcementBar = document.querySelector('.announcemnet-bar-wrapper');
-//     const menuItems = document.querySelectorAll('header .menu-item-folder-content');
-    
-   
-//     if (header && announcementBar) {
-//         const totalHeight = header.offsetHeight + announcementBar.offsetHeight;
-        
-//         menuItems.forEach(item => {
-//             item.style.paddingTop = `${totalHeight}px`;
-//         });
-//     }
-// }
-
-// window.addEventListener('DOMContentLoaded', updateMenuPadding);
-// window.addEventListener('resize', updateMenuPadding);
 
 //Mobile menu
 document.addEventListener("DOMContentLoaded", () =>{
@@ -421,4 +377,32 @@ document.addEventListener("DOMContentLoaded", () =>{
             mobileMenu.classList.toggle('open-menu')
         })
     }
+})
+
+//Images animation
+document.addEventListener("DOMContentLoaded", () =>{
+if (window.innerWidth > 767) {
+
+    const slowFactor = 0.15;
+
+    document.querySelectorAll(".image-animated").forEach(container => {
+        gsap.fromTo(container, 
+            {
+                y: 0
+            },
+            {
+                y: () => window.innerHeight * slowFactor,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: container,
+                    start: "top 30%",
+                    end: "bottom top",
+                    scrub: true,
+                    
+                }
+            }
+        );
+    });
+}
+
 })
